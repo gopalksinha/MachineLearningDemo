@@ -1,0 +1,110 @@
+#tfheader{
+		background-color:#c3dfef;
+	}
+	#tfnewsearch{
+		float:right;
+		padding:20px;
+	}
+	.tftextinput{
+		margin: 7px;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton {
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #0095cd;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+	 #divContainer, #divResize4 { 
+            border:solid 3px #CCC;
+			position: absolute;
+			left: 1140px;
+			top: 454px;
+			height: 263px;
+			width: 429px; 
+            padding:5px; 
+            margin:5px; 
+            font:13px Arial; 
+            cursor:move; 
+            float:left 
+        } 
+		#divResize0 { 
+            border:solid 3px #CCC; 
+			left: 443px;
+			top: 49px;
+			position: absolute;
+			width: 676px;
+			height: 672px;
+            padding:5px; 
+            margin:5px; 
+            font:13px Arial; 
+            cursor:move
+        } 
+		#divResize1 { 
+            border:solid 3px #CCC; 
+			position: absolute;
+		    left: 1138px;
+			top: 49px;
+			height: 384px;
+			width: 432px; 
+            padding:5px; 
+            margin:5px; 
+            font:13px Arial; 
+            cursor:move
+        } 
+		#divResize2 { 
+            border:solid 3px #CCC; 
+			position: absolute;
+			left: 4px;
+			top: 51px;
+			width: 417px;
+			height: 199px; 
+            padding:5px; 
+            margin:5px; 
+            font:13px Arial; 
+            cursor:move; 
+            float:left 
+        } 
+		
+		#divResize3 { 
+            border:solid 3px #CCC; 
+			position: absolute;
+			left: 4px;
+			top: 272px;
+			width: 417px;
+			height: 447px; 
+            padding:5px; 
+            margin:5px; 
+            font:13px Arial; 
+            cursor:move; 
+            float:left 
+        } 
