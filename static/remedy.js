@@ -1,40 +1,5 @@
 
 
-function doSearch(){
-	  // Do the search
-  
-	  var searchbx = document.getElementById("searchbox"); // get the searchbox
-	  var searchterm = searchbx.value; // get the search term
-	  var $ = jQuery;
-	  
-  
-	  // if it's blank, give up
-	  if (searchterm == ""){
-		alert("Enter a search term"); // put up an explanation for the user
-		return; // jump out of this funciton
-	  }
-	var VAR_URL = 'http://localhost:8983/solr/draft2/select?q=SUMMARY%3A' +searchterm+'*';
-	
-	$.ajax({
-    url: VAR_URL,
-    headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-    },
-    type: "GET", /* or type:"GET" or type:"PUT" */
-    dataType: "json",
-    data: {
-    },
-    success: function (result) {
-        console.log(result);
-		displayResults(result);
-    },
-    error: function () {
-        console.log("error");
-    }
-});
-	  
-	 
-}
 
 function doClear(){
 	window.location.reload();
@@ -44,7 +9,6 @@ function doClear(){
     var iCnt = 0;
     $(document).ready(function() {
 
-       <!-- $(function() { $('#divContainer').draggable(); }); -->
         $(function() { $("#divResize0").draggable().resizable(); });
 		$(function() { $("#divResize1").draggable().resizable(); });
 		$(function() { $("#divResize2").draggable().resizable(); });
@@ -69,11 +33,12 @@ function doClear(){
 
             iCnt = iCnt + 1;
         });
-    });	
+  
 
 function displayResults(data){
+var pythonRestResponseJson = '{{=jsonArray}}';
 var responseArray = [];
-responseArray.push(data.response.docs);
+responseArray.push(pythonRestResponseJson);
 var mydiv = document.getElementById("divResize0");
 responseArray.forEach(function(item, index) {
 	for( var i = 0; i < item.length; i++ ){
@@ -91,3 +56,4 @@ responseArray.forEach(function(item, index) {
     });
 
 }
+});	
